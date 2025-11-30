@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration Form</title>
+    <style>
+      body {
+        background-color: #ffe6f0;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .form-container {
+        border: 1px solid #000;
+        padding: 20px;
+        background-color: #ffe6f0;
+      }
+      label {
+        display: block;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      input[type="email"],
+      input[type="password"],
+      input[type="file"] {
+        width: 100%;
+        padding: 5px;
+        margin-top: 5px;
+      }
+      .gender-options {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .department-options {
+        display: flex;
+        gap: 10px;
+      }
+      .department-options label {
+        display: inline-block;
+        margin-right: 10px;
+      }
+      button {
+        padding: 10px 20px;
+        background-color: #fff;
+        border: 1px solid #000;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Student Registration Form</h2>
+      <form>
+        <label> Roll no.: <input type="text" name="rollno" /> </label>
+        <label>
+          Student name:
+          <input type="text" name="firstname" placeholder="First Name" /> -
+          <input type="text" name="lastname" placeholder="Last Name" />
+        </label>
+        <label> Father's name: <input type="text" name="fathername" /> </label>
+        <label>
+          Date of birth:
+          <input type="text" name="day" placeholder="Day" /> -
+          <input type="text" name="month" placeholder="Month" /> -
+          <input type="text" name="year" placeholder="Year" /> (DD-MM-YYYY)
+        </label>
+        <label> Mobile no.: +91 <input type="text" name="mobile" /> </label>
+        <label> Email id: <input type="email" name="email" /> </label>
+        <label> Password: <input type="password" name="password" /> </label>
+        <label>
+          Gender:
+          <span class="gender-options">
+            <input type="radio" name="gender" value="Male" /> Male
+            <input type="radio" name="gender" value="Female" /> Female
+          </span>
+        </label>
+        <label>
+          Department:
+          <div class="department-options">
+            <label
+              ><input type="checkbox" name="department[]" value="CSE" />
+              CSE</label
+            >
+            <label
+              ><input type="checkbox" name="department[]" value="IT" />
+              IT</label
+            >
+            <label
+              ><input type="checkbox" name="department[]" value="ECE" />
+              ECE</label
+            >
+            <label
+              ><input type="checkbox" name="department[]" value="Civil" />
+              Civil</label
+            >
+            <label
+              ><input type="checkbox" name="department[]" value="Mech" />
+              Mech</label
+            >
+          </div>
+        </label>
+        <label>
+          Course:
+          <select name="course">
+            <option value="">-- Select Current Course's --</option>
+            <!-- Add course options here -->
+          </select>
+        </label>
+        <label>
+          Student photo: <input type="file" name="studentphoto" />
+        </label>
+        <label> City: <input type="text" name="city" /> </label>
+        <label> Address: <input type="text" name="address" /> </label>
+        <center><button type="submit">Register</button></center>
+      </form>
+    </div>
+  </body>
+</html>
